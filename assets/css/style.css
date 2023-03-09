@@ -95,7 +95,7 @@ body {
     font-size: 2rem;
   }
 }
-.container .cardArea .totalScore .score-sign {
+.container .cardArea .totalScore .score-sign, .container .cardArea .totalScore .score-sign2 {
   font-family: "DM Serif Display", serif;
   font-weight: 700;
   display: block;
@@ -108,7 +108,7 @@ body {
   line-height: 2.5;
 }
 @media (min-height: 1100px) {
-  .container .cardArea .totalScore .score-sign {
+  .container .cardArea .totalScore .score-sign, .container .cardArea .totalScore .score-sign2 {
     font-size: 2.5rem;
     line-height: 1.4;
     height: 60px;
