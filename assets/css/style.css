@@ -22,10 +22,16 @@ body {
   width: 514px;
   transform: rotate(16deg);
 }
+@media (max-width: 540px) {
+  .background img {
+    width: 426px;
+  }
+}
 
 .container {
   height: 100vh;
   position: relative;
+  overflow: hidden;
 }
 .container .header {
   display: flex;
@@ -37,14 +43,34 @@ body {
   padding: 30px 0;
   box-shadow: 9px -3px 20px 3px black;
 }
+@media (min-height: 1100px) {
+  .container .header {
+    height: 100px;
+  }
+}
 .container .header h1 {
   font-size: 1.5rem;
 }
+@media (min-height: 1100px) {
+  .container .header h1 {
+    font-size: 2.5rem;
+  }
+}
 .container .header p {
-  font-size: 0.75rem;
+  font-size: 0.89rem;
+}
+@media (max-width: 200px) {
+  .container .header p {
+    font-size: 0.75rem;
+  }
+}
+@media (min-height: 1100px) {
+  .container .header p {
+    font-size: 1.4rem;
+  }
 }
 .container .cardArea {
-  padding: 1.25em;
+  margin-top: 0.6em;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -54,14 +80,24 @@ body {
   font-family: "Satisfy", cursive;
   text-align: center;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 0.3em;
 }
 .container .cardArea .totalScore .total-sign {
   font-size: 1.1rem;
-  text-shadow: -1px 0px 5px rgba(25, 25, 25, 0.831372549);
+  text-shadow: -1px 0px 5px rgba(25, 25, 25, 0.83);
+  background-color: rgba(162, 136, 150, 0.8588235294);
+  padding: 1px 5px;
+  margin-bottom: 7px;
+}
+@media (min-height: 1100px) {
+  .container .cardArea .totalScore .total-sign {
+    font-size: 2rem;
+  }
 }
 .container .cardArea .totalScore .score-sign {
+  font-family: "DM Serif Display", serif;
+  font-weight: 700;
   display: block;
   height: 42px;
   width: 42px;
@@ -69,7 +105,15 @@ body {
   color: black;
   border-radius: 50%;
   margin-bottom: 10px;
-  line-height: 46px;
+  line-height: 2.5;
+}
+@media (min-height: 1100px) {
+  .container .cardArea .totalScore .score-sign {
+    font-size: 2.5rem;
+    line-height: 1.4;
+    height: 60px;
+    width: 60px;
+  }
 }
 .container .cardArea .cards {
   display: flex;
@@ -79,21 +123,113 @@ body {
 }
 .container .cardArea .cards .allCard {
   margin-bottom: 1em;
+  position: relative;
+  text-align: center;
+}
+.container .cardArea .cards .allCard .cardScore {
+  line-height: 2.4;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+}
+.container .cardArea .cards .allCard .cardScore span {
+  display: block;
+  background-image: url("/assets/images/star.svg");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  color: white;
+  left: 51px;
+}
+@media (min-height: 1100px) {
+  .container .cardArea .cards .allCard .cardScore span {
+    background-size: 49px;
+    width: 51px;
+    height: 62px;
+    font-size: 23px;
+  }
+}
+.container .cardArea .cards .allCard .cardScore img {
+  width: 37px;
 }
 .container .cardArea .cards .allCard p {
   margin-bottom: 1em;
   font-size: 0.825em;
+  position: absolute;
+  z-index: 1;
 }
 .container .cardArea .cards .allCard .cardContainer {
   border-radius: 6px;
+  background: rgba(255, 255, 255, 0.231372549);
   height: 200px;
   width: 100%;
+  min-width: 111px;
   border: 3px solid black;
   transition: ease-in-out 0.4s;
   color: wheat;
 }
 .container .cardArea .cards .allCard .cardContainer:hover {
   background-color: rgba(117, 76, 135, 0.9);
+}
+@media (min-width: 540px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    min-width: 151px;
+    height: 208px;
+  }
+}
+@media (max-width: 400px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 187px;
+    min-width: 89px;
+  }
+}
+@media (max-width: 304px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 190px;
+    min-width: 80px;
+  }
+}
+@media (max-width: 304px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 170px;
+    min-width: 60px;
+  }
+}
+@media (max-width: 200px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 164px;
+    min-width: 40px;
+  }
+}
+@media (max-height: 700px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 120px;
+    width: 90%;
+  }
+}
+@media (min-height: 720px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 180px;
+  }
+}
+@media (min-height: 844px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 220px;
+    width: 95%;
+  }
+}
+@media (min-height: 900px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 251px;
+    width: 100%;
+  }
+}
+@media (min-height: 1024px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 322px;
+    min-width: 227px;
+  }
 }
 .container .buttons {
   position: absolute;
@@ -111,6 +247,18 @@ body {
   height: 41px;
   border: none;
   transition: ease-in-out 1s;
+  border: 1px solid black;
+}
+@media (max-width: 200px) {
+  .container .buttons button {
+    font-size: 0.9rem;
+  }
+}
+@media (min-height: 1100px) {
+  .container .buttons button {
+    height: 81px;
+    font-size: 1.8rem;
+  }
 }
 .container .buttons button:nth-child(1) {
   border-right: 2px solid black;

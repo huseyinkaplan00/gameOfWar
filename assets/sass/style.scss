@@ -19,12 +19,15 @@ body {
     left: -128px;
     width: 514px;
     transform: rotate(16deg);
+    @media (max-width: 540px) {
+      width: 426px;
+    }
   }
 }
 .container {
   height: 100vh;
   position: relative;
-
+  overflow: hidden;
   .header {
     display: flex;
     align-items: center;
@@ -34,16 +37,30 @@ body {
     background-color: #ffffffa3;
     padding: 30px 0;
     box-shadow: 9px -3px 20px 3px black;
+
+    @media (min-height: 1100px) {
+      height: 100px;
+    }
     h1 {
       font-size: 1.5rem;
+      @media (min-height: 1100px) {
+        font-size: 2.5rem;
+      }
     }
     p {
-      font-size: 0.75rem;
+      font-size: 0.89rem;
+      @media (max-width: 200px) {
+        font-size: 0.75rem;
+      }
+
+      @media (min-height: 1100px) {
+        font-size: 1.4rem;
+      }
     }
   }
 
   .cardArea {
-    padding: 1.25em;
+    margin-top: 0.6em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -52,13 +69,21 @@ body {
       font-family: "Satisfy", cursive;
       text-align: center;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      gap: 0.3em;
       .total-sign {
         font-size: 1.1rem;
-        text-shadow: -1px 0px 5px #191919d4;
+        @media (min-height: 1100px) {
+          font-size: 2rem;
+        }
+        text-shadow: -1px 0px 5px rgb(25 25 25 / 83%);
+        background-color: #a28896db;
+        padding: 1px 5px;
+        margin-bottom: 7px;
       }
       .score-sign {
+        font-family: "DM Serif Display", serif;
+        font-weight: 700;
         display: block;
         height: 42px;
         width: 42px;
@@ -66,7 +91,13 @@ body {
         color: black;
         border-radius: 50%;
         margin-bottom: 10px;
-        line-height: 46px;
+        line-height: 2.5;
+        @media (min-height: 1100px) {
+          font-size: 2.5rem;
+          line-height: 1.4;
+          height: 60px;
+          width: 60px;
+        }
       }
     }
     .cards {
@@ -74,22 +105,97 @@ body {
       align-items: center;
       justify-content: center;
       gap: 10px;
+
       .allCard {
         margin-bottom: 1em;
+        position: relative;
+        text-align: center;
+        .cardScore {
+          line-height: 2.4;
+          display: flex;
+          justify-content: center;
+          margin-bottom: 5px;
+          span {
+            display: block;
+            background-image: url("/assets/images/star.svg");
+            background-repeat: no-repeat;
+            background-size: 40px;
+            width: 40px;
+            height: 40px;
+            color: white;
+            left: 51px;
+
+            @media (min-height: 1100px) {
+              background-size: 49px;
+              width: 51px;
+              height: 62px;
+              font-size: 23px;
+            }
+          }
+
+          img {
+            width: 37px;
+          }
+        }
+
         p {
           margin-bottom: 1em;
           font-size: 0.825em;
+          position: absolute;
+          z-index: 1;
         }
         .cardContainer {
           border-radius: 6px;
-
+          background: #ffffff3b;
           height: 200px;
           width: 100%;
+          min-width: 111px;
           border: 3px solid black;
           transition: ease-in-out 0.4s;
           color: wheat;
           &:hover {
             background-color: rgb(117 76 135 / 90%);
+          }
+
+          @media (min-width: 540px) {
+            min-width: 151px;
+            height: 208px;
+          }
+          @media (max-width: 400px) {
+            height: 187px;
+            min-width: 89px;
+          }
+          @media (max-width: 304px) {
+            height: 190px;
+            min-width: 80px;
+          }
+          @media (max-width: 304px) {
+            height: 170px;
+            min-width: 60px;
+          }
+          @media (max-width: 200px) {
+            height: 164px;
+            min-width: 40px;
+          }
+          @media (max-height: 700px) {
+            height: 120px;
+            width: 90%;
+          }
+          @media (min-height: 720px) {
+            height: 180px;
+          }
+
+          @media (min-height: 844px) {
+            height: 220px;
+            width: 95%;
+          }
+          @media (min-height: 900px) {
+            height: 251px;
+            width: 100%;
+          }
+          @media (min-height: 1024px) {
+            height: 322px;
+            min-width: 227px;
           }
         }
       }
@@ -111,6 +217,15 @@ body {
       height: 41px;
       border: none;
       transition: ease-in-out 1s;
+      border: 1px solid black;
+      @media (max-width: 200px) {
+        font-size: 0.9rem;
+      }
+
+      @media (min-height: 1100px) {
+        height: 81px;
+        font-size: 1.8rem;
+      }
 
       &:nth-child(1) {
         border-right: 2px solid black;
