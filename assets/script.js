@@ -38,7 +38,9 @@ const newCardFunc = () => {
 
           })
 }
-
+// normal function call, to get deck without get deck button click at the game start  
+newDeckBtn.addEventListener("click", newDeckFunc())
+//callback function,  to get new deck from api 
 newDeckBtn.addEventListener("click", newDeckFunc)
 newCard.addEventListener("click", newCardFunc)
 
@@ -76,14 +78,55 @@ const values = (cards0, cards1, cards2, cards3, cards4 , cards5) => {
                document.getElementById("scoreOverAllYour").style.color = "red" 
           }
 
+          setTimeout(() => {
+               document.querySelector(".win-popup1").style.opacity = "1"
+               
+          }, 1000);
+          setTimeout(() => {
+               document.querySelector(".win-popup1").style.opacity = "0"
+          }, 5000);
+          
+
      }
 
      else if (pcSum > yourSum){
           computerScore++
           document.getElementById("scoreOverAllPc").textContent = computerScore
+          
           if(computerScore>=10){
                document.getElementById("scoreOverAllPc").style.color = "red" 
           }
+
+          setTimeout(() => {
+              
+                    document.querySelector(".win-popup2").style.opacity = "1"
+            
+               
+               
+          }, 1000);
+
+          setTimeout(() => {
+              
+               document.querySelector(".win-popup2").style.opacity = "0"
+               
+          }, 5000);
+
+     }
+
+     else{
+          setTimeout(() => {
+               document.querySelector(".win-popup1").textContent = "ITS A TIE !"
+               document.querySelector(".win-popup2").textContent = "ITS A TIE !"
+
+               document.querySelector(".win-popup1").style.opacity = "1"
+               document.querySelector(".win-popup2").style.opacity = "1"
+               
+          }, 1000);
+
+          setTimeout(() => {
+               document.querySelector(".win-popup1").style.opacity = "0"
+               document.querySelector(".win-popup2").style.opacity = "0"
+          }, 5000);
      }
      
 }

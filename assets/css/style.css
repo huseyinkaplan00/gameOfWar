@@ -51,6 +51,10 @@ body {
 .container .header h1 {
   font-size: 1.5rem;
 }
+.container .header h1 a {
+  text-decoration: none;
+  color: black;
+}
 @media (min-height: 1100px) {
   .container .header h1 {
     font-size: 2.5rem;
@@ -121,9 +125,45 @@ body {
 }
 .container .cardArea .cards {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+.container .cardArea .cards .win-popup1, .container .cardArea .cards .win-popup2 {
+  transition: opacity 1s;
+  overflow: hidden;
+  position: absolute;
+  opacity: 0;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -55%);
+  z-index: 1;
+  color: white;
+  text-align: center;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  justify-content: center;
+  height: 100px;
+  background-color: rgba(6, 1, 4, 0.7215686275);
+  border-radius: 3px;
+  animation: glowedBox 1s ease-in-out infinite alternate;
+}
+@keyframes glowedBox {
+  from {
+    box-shadow: 1px -5px 20px 0px #d52885, 0 0 20px #040303, 0 0 30px #040203, 0 0 40px #aa517e, 0 0 50px #000000, 0 0 60px #fb3c9b, 0 0 70px #de14e8;
+  }
+}
+.container .cardArea .cards .win-popup1 h3, .container .cardArea .cards .win-popup2 h3 {
+  font-weight: 500;
+  animation: glowedText 1s ease-in-out infinite alternate;
+}
+@keyframes glowedText {
+  to {
+    text-shadow: 0 0 10px #b79898, 0 0 20px #caabb7, 0 0 30px #a77991, 0 0 40px #aa517e, 0 0 50px #3e0923, 0 0 60px #fb3c9b, 0 0 70px #de14e8;
+  }
 }
 .container .cardArea .cards .allCard {
   margin-bottom: 1em;
