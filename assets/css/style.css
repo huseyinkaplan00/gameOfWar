@@ -131,6 +131,7 @@ body {
   gap: 10px;
 }
 .container .cardArea .cards .win-popup1, .container .cardArea .cards .win-popup2 {
+  cursor: none;
   transition: opacity 1s;
   overflow: hidden;
   position: absolute;
@@ -204,6 +205,7 @@ body {
   z-index: 1;
 }
 .container .cardArea .cards .allCard .cardContainer {
+  cursor: none;
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.231372549);
   height: 200px;

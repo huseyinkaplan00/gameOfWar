@@ -116,6 +116,7 @@ body {
       justify-content: center;
       gap: 10px;
       .win-popup1, .win-popup2{
+        cursor: none;
         transition: opacity 1s;
         overflow: hidden;
         position: absolute;
@@ -196,6 +197,7 @@ body {
           z-index: 1;
         }
         .cardContainer {
+          cursor: none;
           border-radius: 6px;
           background: #ffffff3b;
           height: 200px;
