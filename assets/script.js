@@ -56,7 +56,7 @@ const newCardFunc = () => {
 
 // normal  function call, to get deck  without get deck button click at the game start
 newDeckBtn.addEventListener("click", newDeckFunc())
-//callback  function,  to get new deck from api
+//callback function,  to get new deck from api
 newDeckBtn.addEventListener("click", newDeckFunc)
 newCard.addEventListener("click", newCardFunc)
 
