@@ -91,6 +91,11 @@ body {
   display: flex;
   gap: 10px;
 }
+@media (min-width: 1100px) {
+  .container .cardArea .totalScore {
+    margin-bottom: 7px;
+  }
+}
 .container .cardArea .totalScore .sign-total,
 .container .cardArea .totalScore .sign-total1 {
   font-family: "Satisfy", cursive;
@@ -173,6 +178,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
+}
+@media (min-width: 768px) {
+  .container .cardArea .cards {
+    gap: 35px;
+  }
 }
 .container .cardArea .cards .win-popup1,
 .container .cardArea .cards .win-popup2 {
@@ -350,6 +360,12 @@ body {
   .container .cardArea .cards .allCard .cardContainer {
     min-width: 162px;
     height: 95px;
+  }
+}
+@media (min-width: 1100px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 186px;
+    min-width: 172px;
   }
 }
 .container .endOfGame {

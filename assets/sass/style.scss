@@ -78,6 +78,9 @@ body {
           .totalScore {
                display: flex;
                gap: 10px;
+               @media (min-width: 1100px) {
+                    margin-bottom: 7px;
+               }
                .sign-total,
                .sign-total1 {
                     font-family: "Satisfy", cursive;
@@ -144,6 +147,10 @@ body {
                align-items: center;
                justify-content: center;
                gap: 10px;
+
+               @media (min-width: 768px) {
+                    gap: 35px;
+               }
                .win-popup1,
                .win-popup2 {
                     cursor: none;
@@ -298,6 +305,11 @@ body {
                          @media (width: 1024px) and (height: 600px) {
                               min-width: 162px;
                               height: 95px;
+                         }
+
+                         @media (min-width: 1100px) {
+                              height: 186px;
+                              min-width: 172px;
                          }
                     }
                }
