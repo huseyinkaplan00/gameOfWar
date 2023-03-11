@@ -16,30 +16,47 @@ const newDeckFunc = () => {
           .then((res) => res.json())
           .then((data) => {
                deckID = data.deck_id
-               console.log(deckID)
+               
+               document.querySelector(".remain-cards").textContent = `Remaining Cards : ${data.remaining}`
           })
 }
 
 const newCardFunc = () => {
-    
-          
-    
      
      if(goNewCard){
           
                goNewCard = false     
                setTimeout(() => {
                     goNewCard = true     
-               }, 8000);           
+               }, 7100);           
      fetch(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=6`, {
           method: "GET",
      })
           .then((res) => res.json())
           .then((data) => {
+               console.log(data.remaining)
                let playerOnePoint
                for (let i = 0; i <= 5; i++) {
+                    
                     document.querySelector(`.card${[i]}`).innerHTML = `<img src="${data.cards[i].image}"> </img> `
                }
+                    document.querySelector(".remain-cards").textContent = `Remaining Cards : ${data.remaining}`
+                    
+
+                         document.querySelector(".remain-cards").classList.add("remain-animation")
+                                       
+                 
+
+                    setTimeout(() => {
+                         document.querySelector(".remain-cards").classList.remove("remain-animation")
+                    }, 5000);
+
+                    
+                         
+                  
+                    
+
+
 
                     values(data.cards[0].value, data.cards[1].value, data.cards[2].value,data.cards[3].value , data.cards[4].value, data.cards[5].value)
           })
@@ -88,6 +105,7 @@ const values = (cards0, cards1, cards2, cards3, cards4 , cards5) => {
           }
 
           setTimeout(() => {
+               document.querySelector(".win-popup1").textContent = "you win !"
                document.querySelector(".win-popup1").style.opacity = "1"
                
           }, 1000);
@@ -108,6 +126,7 @@ const values = (cards0, cards1, cards2, cards3, cards4 , cards5) => {
           }
 
           setTimeout(() => {
+                    document.querySelector(".win-popup2").textContent = "computer win !"
                     document.querySelector(".win-popup2").style.opacity = "1"
             
                

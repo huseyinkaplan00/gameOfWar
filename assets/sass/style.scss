@@ -108,6 +108,21 @@ body {
       }
     }
     }
+    .remain-cards{
+      
+      background-color: #ffffff75;
+      padding: 10px;
+      }
+      .remain-animation{
+        animation: can 1s ease-in-out  infinite  alternate;
+      @keyframes can {
+        from{
+          transform: scale(.9);
+          text-shadow: 0px -3px 19px black;
+    box-shadow: -1px 0px 3px #fff6f6b5;
+        }
+      }
+    }
     
     .cards {
       display: flex;
@@ -257,6 +272,9 @@ body {
         }
       }
     }
+
+
+   
   }
 
   .buttons {
