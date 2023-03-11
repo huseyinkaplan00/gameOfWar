@@ -91,14 +91,18 @@ body {
   display: flex;
   gap: 10px;
 }
-.container .cardArea .totalScore .sign-total, .container .cardArea .totalScore .sign-total1 {
+.container .cardArea .totalScore .sign-total,
+.container .cardArea .totalScore .sign-total1 {
   font-family: "Satisfy", cursive;
   text-align: center;
   display: flex;
   align-items: center;
   gap: 0.3em;
 }
-.container .cardArea .totalScore .sign-total .total-sign, .container .cardArea .totalScore .sign-total .total-sign1, .container .cardArea .totalScore .sign-total1 .total-sign, .container .cardArea .totalScore .sign-total1 .total-sign1 {
+.container .cardArea .totalScore .sign-total .total-sign,
+.container .cardArea .totalScore .sign-total .total-sign1,
+.container .cardArea .totalScore .sign-total1 .total-sign,
+.container .cardArea .totalScore .sign-total1 .total-sign1 {
   font-size: 1.1rem;
   text-shadow: -1px 0px 5px rgba(25, 25, 25, 0.83);
   background-color: rgba(162, 136, 150, 0.8588235294);
@@ -106,11 +110,19 @@ body {
   margin-bottom: 7px;
 }
 @media (min-height: 1024px) {
-  .container .cardArea .totalScore .sign-total .total-sign, .container .cardArea .totalScore .sign-total .total-sign1, .container .cardArea .totalScore .sign-total1 .total-sign, .container .cardArea .totalScore .sign-total1 .total-sign1 {
+  .container .cardArea .totalScore .sign-total .total-sign,
+  .container .cardArea .totalScore .sign-total .total-sign1,
+  .container .cardArea .totalScore .sign-total1 .total-sign,
+  .container .cardArea .totalScore .sign-total1 .total-sign1 {
     font-size: 2rem;
   }
 }
-.container .cardArea .totalScore .sign-total .score-sign, .container .cardArea .totalScore .sign-total .score-sign2, .container .cardArea .totalScore .sign-total .score-signO, .container .cardArea .totalScore .sign-total1 .score-sign, .container .cardArea .totalScore .sign-total1 .score-sign2, .container .cardArea .totalScore .sign-total1 .score-signO {
+.container .cardArea .totalScore .sign-total .score-sign,
+.container .cardArea .totalScore .sign-total .score-sign2,
+.container .cardArea .totalScore .sign-total .score-signO,
+.container .cardArea .totalScore .sign-total1 .score-sign,
+.container .cardArea .totalScore .sign-total1 .score-sign2,
+.container .cardArea .totalScore .sign-total1 .score-signO {
   font-family: "DM Serif Display", serif;
   font-weight: 700;
   display: block;
@@ -123,7 +135,12 @@ body {
   line-height: 2.5;
 }
 @media (min-height: 1100px) {
-  .container .cardArea .totalScore .sign-total .score-sign, .container .cardArea .totalScore .sign-total .score-sign2, .container .cardArea .totalScore .sign-total .score-signO, .container .cardArea .totalScore .sign-total1 .score-sign, .container .cardArea .totalScore .sign-total1 .score-sign2, .container .cardArea .totalScore .sign-total1 .score-signO {
+  .container .cardArea .totalScore .sign-total .score-sign,
+  .container .cardArea .totalScore .sign-total .score-sign2,
+  .container .cardArea .totalScore .sign-total .score-signO,
+  .container .cardArea .totalScore .sign-total1 .score-sign,
+  .container .cardArea .totalScore .sign-total1 .score-sign2,
+  .container .cardArea .totalScore .sign-total1 .score-signO {
     font-size: 2rem;
     line-height: 1.7;
     height: 60px;
@@ -157,7 +174,8 @@ body {
   justify-content: center;
   gap: 10px;
 }
-.container .cardArea .cards .win-popup1, .container .cardArea .cards .win-popup2 {
+.container .cardArea .cards .win-popup1,
+.container .cardArea .cards .win-popup2 {
   cursor: none;
   transition: opacity 1s;
   overflow: hidden;
@@ -184,7 +202,8 @@ body {
     box-shadow: 1px -5px 20px 0px #d52885, 0 0 20px #040303, 0 0 30px #040203, 0 0 40px #aa517e, 0 0 50px #000000, 0 0 60px #fb3c9b, 0 0 70px #de14e8;
   }
 }
-.container .cardArea .cards .win-popup1 h3, .container .cardArea .cards .win-popup2 h3 {
+.container .cardArea .cards .win-popup1 h3,
+.container .cardArea .cards .win-popup2 h3 {
   font-weight: 500;
   animation: glowedText 1s ease-in-out infinite alternate;
 }
