@@ -269,6 +269,12 @@ body {
     height: 208px;
   }
 }
+@media (max-width: 399px) and (max-height: 592px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 96px !important;
+    min-width: 85px !important;
+  }
+}
 @media (max-width: 400px) {
   .container .cardArea .cards .allCard .cardContainer {
     height: 132px;

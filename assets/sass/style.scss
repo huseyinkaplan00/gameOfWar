@@ -237,10 +237,16 @@ body {
                               height: 208px;
                          }
 
+                         @media (max-width: 399px) and (max-height: 592px) {
+                              height: 96px !important;
+                              min-width: 85px !important;
+                         }
+
                          @media (max-width: 400px) {
                               height: 132px;
                               min-width: 105px;
                          }
+
                          @media (max-width: 304px) {
                               height: 190px;
                               min-width: 80px;
