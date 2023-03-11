@@ -24,4 +24,4 @@ Game Of War Card Game is a simple card game. Draw a card and start battling the 
 - <a href="https://deckofcardsapi.com/"> Deck of Cards API  </a>
 
 ## Links
-🌍Live at : #
+🌍Live at : https://huseyinkaplan00.github.io/gameOfWar/
