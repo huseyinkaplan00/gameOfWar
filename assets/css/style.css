@@ -364,7 +364,7 @@ body {
 }
 @media (min-width: 1100px) {
   .container .cardArea .cards .allCard .cardContainer {
-    height: 186px;
+    height: 180px;
     min-width: 172px;
   }
 }
