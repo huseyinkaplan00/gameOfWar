@@ -220,7 +220,7 @@ body {
 }
 .container .cardArea .cards .allCard .cardScore span {
   display: block;
-  background-image: url("/assets/images/star.svg");
+  background-image: url("https://svgshare.com/i/r2A.svg");
   background-repeat: no-repeat;
   background-size: 40px;
   width: 40px;
