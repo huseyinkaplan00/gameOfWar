@@ -10,6 +10,7 @@
 body {
   font-family: "DM Serif Display", serif;
   background-color: #a28896;
+  // background-color: black;
 }
 .background {
   position: relative;
@@ -30,6 +31,7 @@ body {
   overflow: hidden;
   .header {
     display: flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -37,7 +39,8 @@ body {
     background-color: #ffffffa3;
     padding: 30px 0;
     box-shadow: 9px -3px 20px 3px black;
-    
+    width: 100%;
+  
     @media (min-height: 1100px) {
       height: 100px;
     }
@@ -123,6 +126,8 @@ body {
         }
       }
     }
+
+    
     
     .cards {
       display: flex;
@@ -160,13 +165,7 @@ body {
         h3{
           font-weight: 500;
         animation: glowedText 1s ease-in-out infinite alternate;
-        @keyframes glowedText {
-          to {
-            text-shadow: 0 0 10px #b79898, 0 0 20px #caabb7, 0 0 30px #a77991, 0 0 40px #aa517e, 0 0 50px #3e0923, 0 0 60px #fb3c9b, 0 0 70px #de14e8;
-          }
-          
-          
-        }
+       
          
       }
 
@@ -277,6 +276,23 @@ body {
    
   }
 
+  .endOfGame{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2em;
+    text-align: center;
+    h1{
+      font-size: 5rem;
+      animation: glowedText 1s ease-in-out infinite alternate;
+     
+
+    }
+    
+  }
+
+
   .buttons {
     position: absolute;
     bottom: 0;
@@ -324,9 +340,12 @@ body {
   }
 }
 
-.d-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
+
+@keyframes glowedText {
+  to {
+    text-shadow: 0 0 10px #b79898, 0 0 20px #f70060, 0 0 30px #a77991, 0 0 40px #aa517e, 0 0 50px #3e0923, 0 0 60px #fb3c9b, 0 0 70px #de14e8;
+  }
+  
+  
+}

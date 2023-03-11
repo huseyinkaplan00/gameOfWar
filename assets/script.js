@@ -3,6 +3,7 @@ const newCard = document.getElementById("newCard")
 let deckID
 let computerScore = 0
 let yourScore = 0
+let remainCards 
 const valueOptions = ["2", "3", "4", "5", "6", "7", "8", "9", 
      "10", "JACK", "QUEEN", "KING", "ACE"]
 
@@ -18,6 +19,7 @@ const newDeckFunc = () => {
                deckID = data.deck_id
                
                document.querySelector(".remain-cards").textContent = `Remaining Cards : ${data.remaining}`
+
           })
 }
 
@@ -28,18 +30,26 @@ const newCardFunc = () => {
                goNewCard = false     
                setTimeout(() => {
                     goNewCard = true     
-               }, 7100);           
+               }, 6000);           
      fetch(`https://deckofcardsapi.com/api/deck/${deckID}/draw/?count=6`, {
           method: "GET",
      })
           .then((res) => res.json())
           .then((data) => {
-               console.log(data.remaining)
-               let playerOnePoint
+                 
+               if (data.remaining === 0){
+                    endOfGame()
+
+                    newCard.disabled = true
+                    newDeckBtn.disabled = true
+               }
+               
+               
                for (let i = 0; i <= 5; i++) {
                     
                     document.querySelector(`.card${[i]}`).innerHTML = `<img src="${data.cards[i].image}"> </img> `
-               }
+               }    
+                    
                     document.querySelector(".remain-cards").textContent = `Remaining Cards : ${data.remaining}`
                     
 
@@ -49,11 +59,9 @@ const newCardFunc = () => {
 
                     setTimeout(() => {
                          document.querySelector(".remain-cards").classList.remove("remain-animation")
-                    }, 5000);
+                    }, 3000);
 
                     
-                         
-                  
                     
 
 
@@ -90,9 +98,9 @@ const values = (cards0, cards1, cards2, cards3, cards4 , cards5) => {
      const playerFiveValue = valueOptions.indexOf(cards4)
      const playerSixValue = valueOptions.indexOf(cards5)
 
-     let scores = ["","","",playerFourValue , playerFiveValue , playerSixValue]
+     let playerTwoScores = ["","","",playerFourValue , playerFiveValue , playerSixValue]
      for( let i = 3; i<=5; i++){
-          document.querySelector(`.value${i}`).textContent = scores[i]+2
+          document.querySelector(`.value${i}`).textContent = playerTwoScores[i]+2
      }
      let pcSum = (playerFourValue+2) + (playerFiveValue+2) + (playerSixValue+2)
      document.querySelector(".score-sign2").textContent = pcSum
@@ -112,7 +120,7 @@ const values = (cards0, cards1, cards2, cards3, cards4 , cards5) => {
           setTimeout(() => {
                
                document.querySelector(".win-popup1").style.opacity = "0"
-          }, 5000);
+          }, 4000);
           
 
      }
@@ -136,7 +144,7 @@ const values = (cards0, cards1, cards2, cards3, cards4 , cards5) => {
           setTimeout(() => {
                
                document.querySelector(".win-popup2").style.opacity = "0"
-          }, 5000);
+          }, 4000);
 
      }
 
@@ -154,9 +162,41 @@ const values = (cards0, cards1, cards2, cards3, cards4 , cards5) => {
                document.querySelector(".win-popup1").style.opacity = "0"
                document.querySelector(".win-popup2").style.opacity = "0"
 
-          }, 5000);
+          }, 4000);
      }
+     
      
 }
 
+
+const endOfGame = () => {
+
+//calculating who wines at the end
+     const div = document.querySelector(".cardArea")
+     div.parentNode.removeChild(div)
+     if(yourScore > computerScore ){
+          document.querySelector(".endOfGame").innerHTML = `
+          <img src="https://media.giphy.com/media/zVtphYOEKyttWEdOlv/giphy.gif" alt="game over gif">
+               <h1>You Win Congratulations !</h1> 
+          `
+
+     }
+
+     else if (yourScore< computerScore){
+          document.querySelector(".endOfGame").innerHTML = `
+          <img src="https://media.giphy.com/media/zVtphYOEKyttWEdOlv/giphy.gif" alt="game over gif">
+               <h1>Computer Win !</h1> 
+          `
+     }
+
+     else{
+          document.querySelector(".endOfGame").innerHTML = `
+          <img src="https://media.giphy.com/media/zVtphYOEKyttWEdOlv/giphy.gif" alt="game over gif">
+               <h1>ITS A TIE !</h1> 
+          `
+     }
+
+
+
+}
 
