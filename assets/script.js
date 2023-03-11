@@ -175,14 +175,20 @@ const endOfGame = () => {
      const div = document.querySelector(".cardArea")
      div.parentNode.removeChild(div)
      if(yourScore > computerScore ){
+
+          document.body.style.background = "#411c31"
+          document.body.style.color = "white"
+
           document.querySelector(".endOfGame").innerHTML = `
-          <img src="https://media.giphy.com/media/zVtphYOEKyttWEdOlv/giphy.gif" alt="game over gif">
-               <h1>You Win Congratulations !</h1> 
+          <img src="https://media.giphy.com/media/ZBPzPhOF9N6tVh82yr/giphy.gif" alt="game over gif">
+               <h1> Congratulations , You Win !</h1> 
           `
 
      }
 
      else if (yourScore< computerScore){
+          document.body.style.background = "black"
+
           document.querySelector(".endOfGame").innerHTML = `
           <img src="https://media.giphy.com/media/zVtphYOEKyttWEdOlv/giphy.gif" alt="game over gif">
                <h1>Computer Win !</h1> 

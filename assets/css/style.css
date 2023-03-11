@@ -50,6 +50,11 @@ body {
     height: 100px;
   }
 }
+@media (min-height: 1368px) {
+  .container .header {
+    height: 155px;
+  }
+}
 .container .header h1 {
   font-size: 1.5rem;
 }
@@ -100,7 +105,7 @@ body {
   padding: 1px 5px;
   margin-bottom: 7px;
 }
-@media (min-height: 1100px) {
+@media (min-height: 1024px) {
   .container .cardArea .totalScore .sign-total .total-sign, .container .cardArea .totalScore .sign-total .total-sign1, .container .cardArea .totalScore .sign-total1 .total-sign, .container .cardArea .totalScore .sign-total1 .total-sign1 {
     font-size: 2rem;
   }
@@ -119,8 +124,8 @@ body {
 }
 @media (min-height: 1100px) {
   .container .cardArea .totalScore .sign-total .score-sign, .container .cardArea .totalScore .sign-total .score-sign2, .container .cardArea .totalScore .sign-total .score-signO, .container .cardArea .totalScore .sign-total1 .score-sign, .container .cardArea .totalScore .sign-total1 .score-sign2, .container .cardArea .totalScore .sign-total1 .score-signO {
-    font-size: 2.5rem;
-    line-height: 1.4;
+    font-size: 2rem;
+    line-height: 1.7;
     height: 60px;
     width: 60px;
   }
@@ -128,6 +133,12 @@ body {
 .container .cardArea .remain-cards {
   background-color: rgba(255, 255, 255, 0.4588235294);
   padding: 10px;
+}
+@media (min-height: 1368px) {
+  .container .cardArea .remain-cards {
+    padding: 1em 1.5em;
+    font-size: 1.5rem;
+  }
 }
 .container .cardArea .remain-animation {
   animation: can 1s ease-in-out infinite alternate;
@@ -241,14 +252,20 @@ body {
 }
 @media (max-width: 400px) {
   .container .cardArea .cards .allCard .cardContainer {
-    height: 187px;
-    min-width: 89px;
+    height: 132px;
+    min-width: 105px;
   }
 }
 @media (max-width: 304px) {
   .container .cardArea .cards .allCard .cardContainer {
     height: 190px;
     min-width: 80px;
+  }
+}
+@media (max-width: 280px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 115px !important;
+    min-width: 77px !important;
   }
 }
 @media (max-width: 304px) {
@@ -263,7 +280,7 @@ body {
     min-width: 40px;
   }
 }
-@media (max-height: 700px) {
+@media (min-height: 700px) {
   .container .cardArea .cards .allCard .cardContainer {
     height: 120px;
     width: 90%;
@@ -271,13 +288,14 @@ body {
 }
 @media (min-height: 720px) {
   .container .cardArea .cards .allCard .cardContainer {
-    height: 180px;
+    height: 150px;
   }
 }
 @media (min-height: 844px) {
   .container .cardArea .cards .allCard .cardContainer {
-    height: 220px;
-    width: 95%;
+    height: 210px;
+    width: 100%;
+    min-width: 110px;
   }
 }
 @media (min-height: 900px) {
@@ -288,8 +306,25 @@ body {
 }
 @media (min-height: 1024px) {
   .container .cardArea .cards .allCard .cardContainer {
-    height: 322px;
+    height: 310px;
     min-width: 227px;
+  }
+}
+@media (min-height: 1368px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 353px;
+  }
+}
+@media (width: 1280px) and (height: 800px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    height: 188px;
+    width: 100%;
+  }
+}
+@media (width: 1024px) and (height: 600px) {
+  .container .cardArea .cards .allCard .cardContainer {
+    min-width: 162px;
+    height: 95px;
   }
 }
 .container .endOfGame {
@@ -299,10 +334,32 @@ body {
   justify-content: center;
   margin-top: 2em;
   text-align: center;
+  height: 66%;
+}
+@media (max-width: 365px) {
+  .container .endOfGame img {
+    width: 86%;
+  }
 }
 .container .endOfGame h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   animation: glowedText 1s ease-in-out infinite alternate;
+  letter-spacing: -1.5px;
+}
+@media (max-width: 520px) {
+  .container .endOfGame h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 365px) {
+  .container .endOfGame h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 240px) {
+  .container .endOfGame h1 {
+    font-size: 1.3rem;
+  }
 }
 .container .buttons {
   position: absolute;
